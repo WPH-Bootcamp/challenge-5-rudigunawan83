@@ -1,10 +1,11 @@
-import { addBook, listBooks, searchBook } from '../challenge1';
+import { addBook, listBooks, searchBook, books } from '../challenge1';
 
 describe('Challenge 1 Tests', () => {
   let consoleLogSpy: jest.SpyInstance;
 
   beforeEach(() => {
     consoleLogSpy = jest.spyOn(console, 'log').mockImplementation(() => {});
+    books.length = 0; 
   });
 
   afterEach(() => {
